@@ -6,7 +6,7 @@
 	<body>
 		<h1>List of Twilight characters</h1>
 		{records}
-		<p><a href="/Twilightcharacters/showme/{id}">{name}</a></p>
+		<p><a href="/twilightcharacters/showme/{id}">{name}</a></p>
 		{/records}
 		<p><a href="/home">Home</a></p>
 	</body>
