@@ -16,11 +16,12 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('twilightcharacters');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
+$routes->get('/heroes', 'twilightcharacters::index');
 
 /**
  * --------------------------------------------------------------------
@@ -30,7 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'twilightcharacters::index');
 $routes->get('/image/(:any)', 'Media::image/$1');
 
 /**
